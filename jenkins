@@ -30,13 +30,7 @@ pipeline {
             }
         }
         
-        stage('parallel-3'){
-            steps{
-                sleep 10
-                echo "heyy baby-boy"  
-            
-            }
-        }
+        
     }
 }
 }
