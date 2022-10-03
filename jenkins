@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    stages{
+        stage('seq-1'){
+            steps{
+                sleep 10
+                echo "hello"
+            }
+        }
+        stage('seq-2'){
+            steps{
+                sleep 10
+                echo "welcome"
+            }
+        }
+        stage ('parallel-stages'){
+        parallel{
+        stage('parallel-1'){
+            steps{
+                sleep 10
+                echo "heyy"
+                
+            }
+        }
+        stage('parallel-2'){
+            steps{
+                sleep 10
+                echo "heyy baby"  
+            
+            }
+        }
+        
+        stage('parallel-3'){
+            steps{
+                sleep 10
+                echo "heyy baby-boy"  
+            
+            }
+        }
+    }
+}
+}
+}
